@@ -127,3 +127,25 @@ function registerJoueur()
 }
 
 
+const addEmployeBtnUI = document.getElementById("add-employe-btn");
+addEmployeBtnUI.addEventListener("click", registerJoueur)
+
+function registerJoueur()
+{
+
+   // alert('test')
+    const joueurRef = dbRef.child('employe');
+    const addEmployeInputsUI = document.getElementsByClassName("employe-input");
+    let newEmploye = {};
+    //console.log(addJoueurInputsUI)
+    for (let i = 0, len = addEmployeInputsUI.length; i < len; i++) {
+
+        let key = addEmployeInputsUI[i].getAttribute('data-key');
+        let value = addEmployeInputsUI[i].value;
+        newEmploye[key] = value;
+    }
+   
+	joueurRef.push(newEmploye)
+}
+
+
