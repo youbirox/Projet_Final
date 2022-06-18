@@ -1,0 +1,42 @@
+{
+  "employe": [
+    {
+      "email": "Ayoub@email.com",
+      "nom": "moutii",
+      "prenom": "ayoub",
+      "role": "admin",
+      "salaire": "2500"
+    },
+    {
+      "email": "Ayoub@email.com",
+      "nom": "Ayoub moutii",
+      "prenom": "24",
+      "role": "Ayoub@email.com",
+      "salaire": "Ayoub@email.com"
+    }
+  ],
+  "joueur": [
+    {
+      "adresse": "versaille",
+      "age": "28",
+      "categorie": "categ",
+      "date_naissance": "15/05/1994",
+      "nom": "Ayoub moutii",
+      "prenom": "ayoub"
+    },
+    {
+      "adresse": "Ayoub@email.com",
+      "age": "Ayoub@email.com",
+      "categorie": "Ayoub@email.com",
+      "date_naissance": "Ayoub@email.com",
+      "nom": "Ayoub moutii",
+      "prenom": "24"
+    }
+  ],
+  "user": [
+    {
+      "login": "youbi",
+      "password": "123456"
+    }
+  ]
+}

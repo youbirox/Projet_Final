@@ -1,0 +1,30 @@
+{
+    "employe": [{
+      "nom": "Ayoub moutii",
+      "prenom": "24",
+      "email": "Ayoub@email.com",
+      "salaire": "Ayoub@email.com",
+      "role": "Ayoub@email.com"
+    }, {
+        "nom": "Ayoub moutii",
+        "prenom": "24",
+        "email": "Ayoub@email.com",
+        "salaire": "Ayoub@email.com",
+        "role": "Ayoub@email.com"
+    }],
+    "joueur": [{
+        "nom": "Ayoub moutii",
+        "prenom": "24",
+        "age": "Ayoub@email.com",
+        "categorie": "Ayoub@email.com",
+        "adresse": "Ayoub@email.com",
+        "date_naissance": "Ayoub@email.com"
+      }, {
+          "nom": "Ayoub moutii",
+        "prenom": "24",
+        "age": "Ayoub@email.com",
+        "categorie": "Ayoub@email.com",
+        "adresse": "Ayoub@email.com",
+        "date_naissance": "Ayoub@email.com"
+      }]
+  }
