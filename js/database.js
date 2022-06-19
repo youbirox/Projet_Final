@@ -36,31 +36,6 @@ function redirect()
 // Vérification si le mot de pass bien saisir 
 // -------------
 
-function checkMatch()
-{
-	if (! nom.match(/[A-Z a-z]/)) 
-        throw(new Error("le nom ne doit contenir que des lettres et des espaces"))
-    if (nom.length<=3) 
-        throw(new Error("le nom doit être >3 caractéres"))
-    
-    if (! prenom.match(/[A-Z a-z]/)) 
-        throw(new Error("le prénom ne doit contenir que des lettres et des espaces"))
-    
-    
-    if (!parseInt(age))  //isNAN(age)
-        throw(new Error("l'age dois être numérique"))
-    
-    if (age < 20) 
-        throw(new Error("l'age doit être supérieur à 20 ans"))
-    if (adresse.length < 20) 
-        throw(new Error("l'Adresse doit être de 20 caractéres au mois"))
-    
-    if (! adresse.match(/[ ]/)) 
-        throw(new Error("l' adresse doit comporter au moins un espace"))
-    
-    if (! grades.includes(grade.toLowerCase())) 
-        throw(new Error("la grade doit être correcte"))
-}
 // --------------------------
 // READ
 // --------------------------
@@ -105,47 +80,6 @@ function loginUser() {
 
 }
 
-const addJoueurBtnUI = document.getElementById("add-joueur-btn");
-addJoueurBtnUI.addEventListener("click", registerJoueur)
 
-function registerJoueur()
-{
-
-   // alert('test')
-    const joueurRef = dbRef.child('joueur');
-    const addJoueurInputsUI = document.getElementsByClassName("joueur-input");
-    let newJoueur = {};
-    //console.log(addJoueurInputsUI)
-    for (let i = 0, len = addJoueurInputsUI.length; i < len; i++) {
-
-        let key = addJoueurInputsUI[i].getAttribute('data-key');
-        let value = addJoueurInputsUI[i].value;
-        newJoueur[key] = value;
-    }
-   
-	joueurRef.push(newJoueur)
-}
-
-
-const addEmployeBtnUI = document.getElementById("add-employe-btn");
-addEmployeBtnUI.addEventListener("click", registerJoueur)
-
-function registerJoueur()
-{
-
-   // alert('test')
-    const joueurRef = dbRef.child('employe');
-    const addEmployeInputsUI = document.getElementsByClassName("employe-input");
-    let newEmploye = {};
-    //console.log(addJoueurInputsUI)
-    for (let i = 0, len = addEmployeInputsUI.length; i < len; i++) {
-
-        let key = addEmployeInputsUI[i].getAttribute('data-key');
-        let value = addEmployeInputsUI[i].value;
-        newEmploye[key] = value;
-    }
-   
-	joueurRef.push(newEmploye)
-}
 
 

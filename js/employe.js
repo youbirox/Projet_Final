@@ -13,12 +13,29 @@ var firebaseConfig = {
   firebase.initializeApp(firebaseConfig);
 
   const dbRef = firebase.database().ref();
-
+ 
 const addEmployeBtnUI = document.getElementById("add-employe-btn");
 addEmployeBtnUI.addEventListener("click", registeremploye)
 
+
+
+
+function checkMatch()
+{
+  const addEmployeInputsUI = document.getElementsByClassName("employe-input");
+ 
+  if (addEmployeInputsUI[3].value < 2400) 
+    throw(new Error("le salaire  doit être > 2400 "))
+
+
+	
+}
+
+
+
 function registeremploye()
 {
+  checkMatch()
 
    // alert('test')
     const employeref = dbRef.child('employe');
@@ -34,3 +51,5 @@ function registeremploye()
     console.log(newEmploye)
 	employeref.push(newEmploye)
 }
+
+

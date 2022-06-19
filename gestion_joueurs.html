@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!------ Include the above in your HEAD tag ---------->
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+    <script src="js/dashboard.js"></script>
+</head>
+
+<body class="home">
+    <div class="container-fluid display-table">
+        <div class="row display-table-row">
+            <div class="col-md-2 col-sm-1 hidden-xs display-table-cell v-align box" id="navigation">
+               
+                <div class="navi">
+                    <ul>
+                        <li class="active"><a href="#"><i class="fa fa-home" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Home</span></a></li>
+                        <li><a href="gestion_joueurs.html"><i class="fa fa-tasks" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Gestion Joueur</span></a></li>
+                        <li><a href="gestion_staf.html"><i class="fa fa-bar-chart" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Gestion Staf</span></a></li>
+                        <li><a href="#" onclick="deco()"><i class="fa fa-cog" aria-hidden="true"></i><span class="hidden-xs hidden-sm">Se Déconnecter</span></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-10 col-sm-11 display-table-cell v-align">
+                <!--<button type="button" class="slide-toggle">Slide Toggle</button> -->
+                <div class="row">
+                 
+                </div>
+                <div class="user-dashboard">
+                    <h1>Bonjour, <span id="username"></span></h1>
+                    <div class="row">
+                        <div class="col-md-5 col-sm-5 col-xs-12 gutter">
+                            
+                        </div>
+                        <div class="col-md-7 col-sm-7 col-xs-12 gutter">
+                            <span id='ct' ></span>
+                        </div>
+
+                        <br>
+                        <form >
+                            <input type="text" id="joueur-input" class="joueur-input"  placeholder="nom">
+                            <input type="text" id="joueur-input" class="joueur-input"  placeholder="prenom">
+                            <input style="text-align: center;width: 385px;margin: 0 auto;background-color: #f6f6f6;height: 50px;border: 1px;" type="email" id="email" class="joueur-input"  placeholder="email">
+                            <input style="text-align: center;width: 385px;margin: 0 auto;background-color: #f6f6f6;height: 50px;border: 1px;"  type="password" id="password" class="joueur-input"  placeholder="password">
+                            <input  onchange="checkMatch()" type="text" id="joueur-input" class="joueur-input"  placeholder="age">
+                            <input type="text" id="joueur-input" class="joueur-input"  placeholder="catégorie">
+                            <input type="text" id="joueur-input" class="joueur-input"  placeholder="adresse">
+                            <input  style="text-align: center;width: 385px;margin: 0 auto;background-color: #f6f6f6;height: 50px;border: 1px;" type="date" id="joueur-input" class="joueur-input"   placeholder="Date de naissance">
+                            <button type="button" id="add-joueur-btn" class="fadeIn fourth" >S'inscrire</button>
+                        
+                         </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+    <!------ Include the above in your HEAD tag ---------->
+    <script src="js/joueur.js"></script>
+
+</body>
+</html>
